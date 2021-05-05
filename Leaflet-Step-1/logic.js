@@ -31,7 +31,7 @@ function createFeatures(earthquakeData, myMap) {
         color: "white",
         fillColor: "blue",
         // Adjust radius
-        radius: 1500
+        radius: feature.properties.mag * 20000
       }).bindPopup("<h3>" + feature.properties.place +
         "</h3><hr><p>" + new Date(feature.properties.time) + "</p>").addTo(myMap);
     }
